@@ -21,11 +21,20 @@ Note Taker is a simple web application built with Express.js that allows users t
 
 Github- https://github.com/splacito22/akasha
 
-Heroku-
+Heroku- https://dashboard.heroku.com/apps/akasha-123
 
 # Credits
 
-License
+https://expressjs.com/en/guide/routing.html
+https://nextjs.org/docs/pages/building-your-application/routing/api-routes
+http://expressjs.com/en/guide/routing.html#route-paths
+http://expressjs.com/en/starter/static-files.html
+http://expressjs.com/en/api.html#req.body
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+http://expressjs.com/en/guide/routing.html#express-router
+
+# License
+
 ​MIT License​Copyright (c) [2023] [Stephany Placito]​Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:​The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.​THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Acknowledgements
