@@ -5,10 +5,10 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(express.static("public"));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static("public"));
 
 app.get("/notes", (req, res) => {
   // Serve the notes.html file
@@ -26,7 +26,7 @@ app.get("*", (req, res) => {
 app.get("/api/notes", (req, res) => {
   // Read the db.json file and return saved notes as JSON
   // Use the fs module to read the db.json file
-  fs.readFile("db.json", "utf8", (err, data) => {
+  fs.readFile("db/db.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
       res.status(500).json({ error: "Internal Server Error" });
@@ -49,7 +49,7 @@ app.post("/api/notes", (req, res) => {
   // Receive a new note to save, add it to the db.json file, and return the new note
   const newNote = req.body; // Assuming the new note data is in the request body
   // Use the fs module to read the existing notes from db.json
-  fs.readFile("db.json", "utf8", (err, data) => {
+  fs.readFile("db/db.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
       res.status(500).json({ error: "Internal Server Error" });
@@ -62,7 +62,7 @@ app.post("/api/notes", (req, res) => {
     notes.push(newNote);
 
     // Write the updated notes back to db.json
-    fs.writeFile("db.json", JSON.stringify(notes), (err) => {
+    fs.writeFile("db/db.json", JSON.stringify(notes), (err) => {
       if (err) {
         console.error(err);
         res.status(500).json({ error: "Internal Server Error" });
