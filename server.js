@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+const notes = require("./db/db.json");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -17,7 +17,7 @@ app.get("/notes", (req, res) => {
   res.sendFile(notesPath);
 });
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   // Serve the index.html file
   const indexPath = path.join(__dirname, "./public/index.html");
   res.sendFile(indexPath);
@@ -34,7 +34,7 @@ app.get("/api/notes", (req, res) => {
     }
 
     // Parse the JSON data and send it as the response
-    const notes = JSON.parse(data);
+
     res.json(notes);
   });
 });
@@ -57,7 +57,7 @@ app.post("/api/notes", (req, res) => {
     }
 
     // Parse the existing notes and add the new note
-    const notes = JSON.parse(data);
+    // const notes = JSON.parse(data);
     newNote.id = generateUniqueID(); // Generate a unique ID for the new note
     notes.push(newNote);
 
