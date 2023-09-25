@@ -5,19 +5,21 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.use(express.static("public"));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/notes", (req, res) => {
   // Serve the notes.html file
-  const notesPath = path.join(__dirname, "public", "notes.html");
+  const notesPath = path.join(__dirname, "./public/notes.html");
   // Send the notes.html file as the response
   res.sendFile(notesPath);
 });
 
 app.get("*", (req, res) => {
   // Serve the index.html file
-  const indexPath = path.join(__dirname, "public", "index.html");
+  const indexPath = path.join(__dirname, "./public/index.html");
   res.sendFile(indexPath);
 });
 
