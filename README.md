@@ -6,9 +6,22 @@ Note Taker is a simple web application built with Express.js that allows users t
 
 # Tasks
 
+1. Clone repo
+2. Install dependencies
+3. Start server
+4. Open local server
+5. Click get started button
+6. Create new note
+
 # Usage
 
+[![Screenshot 2023-09-25 153718](https://github.com/splacito22/akasha/assets/136421961/08f8411d-a202-44be-9d16-114c42f93dc4)]
+![Alt text](image.png)
+
 # ​Links
+
+Github- https://github.com/splacito22/akasha
+Heroku-
 
 # Credits
 
